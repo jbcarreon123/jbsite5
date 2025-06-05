@@ -1,0 +1,41 @@
+---
+import { base } from "astro:config/server";
+import StatusCafe from '../components/StatusCafe.svelte';
+import '../styles/global.css'
+import Sidebar from "../components/Sidebar.astro";
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href={base + '/favicon.svg'} />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+        <script src="../scripts/global.ts"></script>
+		<title>jbsite5</title>
+	</head>
+	<body>
+		<div id="layout_container">
+            <header>
+                <h1><a class="header--big" href={base}>jbcarreon123</a></h1>
+                <div class="header--right">
+                    <a href="//status.cafe/users/jbcarreon123" target="_blank" style="display: contents; color: inherit;">
+                        <StatusCafe client:only="svelte" />
+                    </a>
+                </div>
+            </header>
+            <aside id="leftbar">
+                <Sidebar />
+            </aside>
+            <main>
+                <slot></slot>
+            </main>
+            <aside id="rightbar">
+
+            </aside>
+            <footer>
+
+            </footer>
+        </div>
+	</body>
+</html>
