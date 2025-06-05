@@ -55,7 +55,6 @@ body {
         padding-top: 36px;
         grid-area: main;
         border: 2px solid var(--acc);
-        height: 3600px;
     }
 
     header {

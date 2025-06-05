@@ -20,7 +20,7 @@ export default defineConfig({
     site: 'https://jbcarreon123.nekoweb.org',
     base: '/jbsite5',
 
-    integrations: [...nkw, svelte()],
+    integrations: [svelte(), ...nkw],
 
     build: {
         concurrency: 12
