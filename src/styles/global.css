@@ -10,6 +10,17 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: Material Symbols;
+    src: url(/jbsite5/fonts/MaterialSymbols.woff2);
+    font-display: block;
+    font-variation-settings:
+        "FILL" 1,
+        "wght" 400,
+        "GRAD" 0,
+        "opsz" 24;
+}
+
 :root {
     --bg: #181825;
     --cbg: #1e1e2e;
@@ -121,6 +132,10 @@ body {
             display: flex;
             flex-direction: column;
             padding-top: 12px;
+
+            a {
+                padding-block: 3px;
+            }
         }
 
         .links:first-child {
@@ -167,4 +182,16 @@ a {
 
 a:hover, a:active {
     color: var(--link-hover);
+}
+
+p {
+    padding-block: 6px;
+}
+
+a[target='_blank']::after {
+    font-family: 'Material Symbols';
+    content: 'open_in_new';
+    padding-left: 3px;
+    vertical-align: bottom;
+    text-decoration-color: transparent;
 }
