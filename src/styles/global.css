@@ -70,7 +70,7 @@ body {
 
     header {
         position: absolute;
-        top: 36px;
+        bottom: -65px;
         padding-left: 12px;
         height: 115px;
         grid-area: header;
@@ -176,6 +176,7 @@ body {
 
         header {
             justify-content: center;
+            bottom: -75px;
         }
 
         header .header--big {
