@@ -2,7 +2,7 @@ name: Deploy to Nekoweb and GH Pages (Backup host)
 
 on:
   push:
-    branches: [ dev ]
+    branches: [ master ]
   workflow_dispatch:
 
 permissions:
