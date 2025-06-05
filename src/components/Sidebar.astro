@@ -4,7 +4,7 @@ import { base } from "astro:config/server";
 ---
 
 {LinkObjs.map((obj) => <div class="links">
-    <h2>{obj.name}</h2>
+    <h3>{obj.name}</h3>
     {obj.links.map((l) => <a id={l.path.replace(/\/$/, '').split('/')[l.path.replace(/\/$/, '').split('/').length - 1]} href={((l.path.startsWith('/') ? base : '') + l.path).replace('//', '/')} target={l.redirect ? '_blank' : '_parent'}>
         <span aria-hidden="true" class="ms" data-icon={l.icon}></span> {l.name} {l.redirect && <span aria-hidden="true" class="ms" data-icon="open_in_new"></span>}
     </a>)}

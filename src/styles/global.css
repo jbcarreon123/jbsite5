@@ -141,6 +141,12 @@ body {
         .links:first-child {
             padding-top: 0;
         }
+
+        h3 {
+            max-width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
     }
 
     #rightbar {
@@ -148,8 +154,10 @@ body {
         border: 2px solid var(--acc);
     }
 
-    @media screen and (width <= 1200px) {
-        header .header--right {
+    @media screen and (width <= 1000px) {
+        grid-template-columns: 100px 1fr 100px;
+
+        .header--right {
             display: none;
         }
     }
